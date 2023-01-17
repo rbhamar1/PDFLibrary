@@ -22,6 +22,9 @@
     <Reference Include="PDFLibrary">
       <HintPath>..\..\..\DLL\PDFLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="PDFLibrary">
+      <HintPath>..\..\DLL\PDFLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ibm_logo.png" />

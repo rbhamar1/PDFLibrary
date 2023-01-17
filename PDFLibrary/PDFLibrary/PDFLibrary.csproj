@@ -21,9 +21,6 @@
     <Folder Include="PDFUtility\Barcode\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PDFUtility\PDFLibrary.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
     <PackageReference Include="Dawn.Guard" Version="1.12.0" />
   </ItemGroup>

@@ -127,7 +127,7 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
     <Reference Include="PDFLibrary">
-      <HintPath>..\..\..\DLL\PDFLibrary.dll</HintPath>
+      <HintPath>..\..\DLL\PDFLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
