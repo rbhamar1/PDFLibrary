@@ -36,7 +36,7 @@ namespace PDFGenerator
             var now = DateTime.Now;
             var dateText = now.Date.ToString("MM-dd-yy");
             var timeText = now.ToString("HH:mm:ss");
-            
+
             // Paginator is the main class which layouts different views on the page 
             // according to thier height and width
             // PdfPageTemplate contains info like hieght, width and margins of the page
@@ -44,17 +44,16 @@ namespace PDFGenerator
                 .WithFont(font);
 
             paginator.AddBlankRow();
-            
-            var mainHeaderRegion = AddHeaderSection(PdfFontFactory.CreateRegularFont(2,4));
+
+            var mainHeaderRegion = AddHeaderSection(PdfFontFactory.CreateRegularFont(2, 4));
             paginator.MakeSureCurrentPage();
 
             paginator.AddStaticImage(EmbeddedSourceror.SourceFor("Ibm_logo.png"), 5, 5, 40, 20)
                 .AddRegions(mainHeaderRegion);
-            
+
             //this will provide space between two blocks
             paginator.AddBlankRow();
 
-            // Note: this document is mostly decimal-spaced, which is very uncommon
             paginator.AddBlankRow()
                 .AddRow(decimalLine)
                 .AddBlankRow()
@@ -67,15 +66,15 @@ namespace PDFGenerator
                 .AddBlankRow()
                 .AddBlankRow();
             AddProductsHeaderSection(paginator, PdfFontFactory.CreateSmallBoldFont());
-            AddProducts(paginator,font);
-            
-                paginator.AddBlankRow()
-                           .AddRow(decimalLine)
-                           .AddBlankRow()
-                           .AddRow("This is a sample report", TextAlignment.Center)
-                           .AddBlankRow()
-                           .AddBlankRow()
-                           .AddRow("-------End of the Report--------", TextAlignment.Center);
+            AddProducts(paginator, font);
+
+            paginator.AddBlankRow()
+                       .AddRow(decimalLine)
+                       .AddBlankRow()
+                       .AddRow("This is a sample report", TextAlignment.Center)
+                       .AddBlankRow()
+                       .AddBlankRow()
+                       .AddRow("-------End of the Report--------", TextAlignment.Center);
 
             return paginator.GetPages();
         }

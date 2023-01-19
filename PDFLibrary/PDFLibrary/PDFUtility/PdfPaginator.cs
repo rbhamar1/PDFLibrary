@@ -351,7 +351,6 @@ namespace PDFLibrary
             return this;
         }
 
-        //TODO: current code is short term until the tech debt item is addressed
         public PdfPaginator AddStaticImage(ImageSource pdfImage, double x, double y, double width,
                                            double height)
         {
